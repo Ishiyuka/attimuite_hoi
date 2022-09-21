@@ -1,6 +1,6 @@
 class Hero
   def fingger
-    puts "あっちむいて、ほい"
+    puts "あっちむいて、ほい！"
     puts "0: 上, 1: 下, 2: 右, 3: 左"
 
   input_fingger = gets.chomp
@@ -8,15 +8,13 @@ class Hero
 
   while true
     # 条件がtrueの間、繰り返される
-    # finggers = ["0","1", "2","3"]
-    # finggers（変数）に代入させる
       if (["0","1","2","3"].include?(input_fingger))
         # .include? その文字が含まれているかどうか
         return input_fingger.to_i
         # to_i　文字列を整数にする
       else
         # 0,1,2,3以外を入力した場合の処理
-        puts "斜めはダメです"
+        puts "これは真剣勝負だ。斜めを見るんじゃない！"
         puts "0: 上, 1: 下, 2: 右, 3: 左"
         input_fingger = gets.chomp
       end
@@ -37,7 +35,7 @@ class Attimuite_hoi
     # 変数「atiimuite_hoi」に["上","下","右","左"]を代入
     puts "ラスボスは#{attimuite_hoi[lastboss_face]}を向いた！！"
     if hero_fingger != lastboss_face
-      puts "ミス！スッと交された・・・"
+      puts "ミス！スッと躱された・・・"
       true #「true」を返してあっち向いてホイを繰り返し実行させます。
     else # ヒーローの指とラスボスの顔が一致しない時
       puts "ラスボスを倒した！あなたがヒーローです。"
