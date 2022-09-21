@@ -26,7 +26,7 @@ end
 
 class Lastboss
   def face
-    return rand(5)
+    return rand(0..4)
     # rand ０以上４未満の整数をランダムに返す
   end
 end
@@ -54,13 +54,13 @@ class BattleStart
     # 変数「hero」にHeroをインスタンス化したものを代入します。
     lastboss = Lastboss.new
     attimuite_hoi = Attimuite_hoi.new
-    # next_battle
+    next_battle = true
     # 「next_battle」が「false」だと戦いを終了し、「true」だと戦いを継続します。
-    # while next_battle == true
+    while next_battle == true
     # # 変数「next_battle」にあっち向いてホイを実行して返ってきた戻り値に代入します。
-    # next_battle = attimuite_hoi(hero.fingger,lastboss.face)
+    next_battle = attimuite_hoi.hoi(hero.fingger,lastboss.face)
     end
   end
-
+end
 BattleStart.attimuite
 # クラス名を使ってattimuite_hiメソッドを呼び出し、最後の戦いが始まります。
